@@ -61,10 +61,13 @@ func printMid(node: BinaryTreeNode?) {
     guard let node = node else {
         return
     }
-    printPre(node: node.leftNode)
+    if node.leftNode != nil {
+        printPre(node: node.leftNode)
+    }
     print(node.value)
-    printPre(node: node.rightNode)
-    
+    if node.rightNode != nil {
+        printPre(node: node.rightNode)
+    }
 }
 
 printPre(node: root)
